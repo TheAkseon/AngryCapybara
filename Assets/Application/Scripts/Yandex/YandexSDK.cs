@@ -39,6 +39,11 @@ public class YandexSDK : MonoBehaviour
         _levelLoader = FindObjectOfType<LevelLoader>();
         SaveData.Instance.Load();
 
+        if(SaveData.Instance.Data == null)
+        {
+            SaveData.Instance.NewData();
+        }
+
         if (SaveData.Instance.Data.CurrentLevel == 0 && SaveData.Instance.Data.FakeLevel == 0)
         {
             SaveData.Instance.Data.CurrentLevel = 1;
@@ -46,6 +51,7 @@ public class YandexSDK : MonoBehaviour
         }
 
         _levelLoader.LoadLevel(SaveData.Instance.Data.CurrentLevel);
+
         yield return null;
 #else
         yield return YandexGamesSdk.Initialize();
@@ -102,34 +108,24 @@ public class YandexSDK : MonoBehaviour
 
     private IEnumerator GetData()
     {
-        /*if (!PlayerAccount.IsAuthorized)
+        string loadedString = "None";
+
+        PlayerAccount.GetCloudSaveData((data) =>
         {
-            PlayerAccount.Authorize();
-        }*/
+            loadedString = data;
+        });
 
-        if (PlayerAccount.IsAuthorized)
+        while (loadedString == "None")
         {
-            //PlayerAccount.RequestPersonalProfileDataPermission();
-
-            string loadedString = "None";
-
-            PlayerAccount.GetCloudSaveData((data) =>
-            {
-                loadedString = data;
-            });
-
-            while (loadedString == "None")
-            {
-                yield return null;
-            }
-
-            if (loadedString == "{}")
-            {
-                yield break;
-            }
-
-            SaveData.Instance._data = JsonUtility.FromJson<DataHolder>(loadedString);
-            SaveManager.Save(_saveKey, SaveData.Instance._data);
+            yield return null;
         }
+
+        if (loadedString == "{}")
+        {
+            yield break;
+        }
+
+        SaveData.Instance._data = JsonUtility.FromJson<DataHolder>(loadedString);
+        SaveManager.Save(_saveKey, SaveData.Instance._data);
     }
 }

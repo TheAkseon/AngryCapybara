@@ -26,6 +26,11 @@ public class SaveData : MonoBehaviour
         }
     }
 
+    public void NewData()
+    {
+        _data = new DataHolder();
+    }
+
    /* private void Update()
     {
         if (Input.GetKey(KeyCode.R))
