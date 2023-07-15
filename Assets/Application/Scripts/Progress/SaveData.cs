@@ -31,7 +31,7 @@ public class SaveData : MonoBehaviour
         _data = new DataHolder();
     }
 
-   /* private void Update()
+    private void Update()
     {
         if (Input.GetKey(KeyCode.R))
         {
@@ -40,7 +40,7 @@ public class SaveData : MonoBehaviour
             SaveManager.Reset(_saveKey, _data);
             SaveYandex();
         }
-    }*/
+    }
 
     private void OnDisable()
     {

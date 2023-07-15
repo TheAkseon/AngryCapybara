@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5734624795025209455}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &4531288855483915195
 SkinnedMeshRenderer:
@@ -165,10 +165,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8706184154649580115}
   - {fileID: 8534572619028190943}
   - {fileID: 1071571304626177466}
   - {fileID: 608920810879191931}
-  - {fileID: 8706184154649580115}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -184,7 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ef276bf0b6b2be49878258192bb09dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _warpSpeedEffect: {fileID: 0}
   speed: 10
   rotationSpeed: 10
   movementLimit: {x: -3.5, y: 3.5}
@@ -234,7 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 357e2ba28729ec142856b44331269404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smoke: {fileID: 0}
 --- !u!114 &1864413209785294234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,7 +459,7 @@ RectTransform:
   m_Children:
   - {fileID: 3850770761515124294}
   m_Father: {fileID: 5734624795025209455}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -12.254, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -635,7 +633,7 @@ Transform:
   m_Children:
   - {fileID: 7693771749764492886}
   m_Father: {fileID: 5734624795025209455}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &9176133860553438648
 PrefabInstance:
@@ -647,7 +645,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 019664223f72dda439fa5dbe868b48c8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 019664223f72dda439fa5dbe868b48c8,
         type: 3}
@@ -717,7 +715,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 019664223f72dda439fa5dbe868b48c8,
         type: 3}
       propertyPath: m_Name
-      value: kapibara_animated
+      value: KapibaraModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 019664223f72dda439fa5dbe868b48c8, type: 3}
