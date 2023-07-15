@@ -6,6 +6,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void Play() 
     {
+        PlayerAnimationController.Instance.Run();
         //_smoke.SetActive(true);
     }
 

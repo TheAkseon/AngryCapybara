@@ -78,7 +78,7 @@ public class BossFight : MonoBehaviour
         _isPreFinish = true;
         _playerMove.StopMovement();
         SwitchCamera();
-        PlayerAnimationController.Instance.Prepair();
+        //PlayerAnimationController.Instance.Prepair();
         Invoke(nameof(SetFight), 1f);
     }
 

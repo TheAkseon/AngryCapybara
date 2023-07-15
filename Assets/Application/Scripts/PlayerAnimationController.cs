@@ -6,9 +6,10 @@ public class PlayerAnimationController : MonoBehaviour
 
     private Animator animator;
 
-    private static readonly string _prepair = "Prepair";
+    private static readonly string _run = "Run";
     private static readonly string _bossHit = "Boss Hit";
     private static readonly string _hit = "Hit";
+    private static readonly string _dance = "Dance";
 
     private void Awake()
     {
@@ -24,6 +25,8 @@ public class PlayerAnimationController : MonoBehaviour
 
     public void Hit() => animator.SetTrigger(_hit);
 
-    public void Prepair() => animator.SetTrigger(_prepair);
+    public void Run() => animator.SetTrigger(_run);
+
+    public void Dance() => animator.SetTrigger(_dance);
 }
 
