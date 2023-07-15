@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    [SerializeField] GameObject _smoke;
+    //[SerializeField] GameObject _smoke;
 
     public void Play() 
     {
-        _smoke.SetActive(true);
+        //_smoke.SetActive(true);
     }
 
     public void StartFinishBehaviour() {

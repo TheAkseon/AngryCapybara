@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
     public static PlayerMove Instance;
 
-    [SerializeField] private ParticleSystem _warpSpeedEffect;
+    //[SerializeField] private ParticleSystem _warpSpeedEffect;
 
     // New movement
     [SerializeField] private float speed = 2;
@@ -101,7 +101,7 @@ public class PlayerMove : MonoBehaviour
         if (speed == _originalSpeed)
         {
             speed *= nitroMultiplier;
-            _warpSpeedEffect.gameObject.SetActive(true);
+            //_warpSpeedEffect.gameObject.SetActive(true);
         }
         else
         {
@@ -116,7 +116,7 @@ public class PlayerMove : MonoBehaviour
         if (!_extendNitro)
         {
             speed = _originalSpeed;
-            _warpSpeedEffect.gameObject.SetActive(false);
+            //_warpSpeedEffect.gameObject.SetActive(false);
         }
         _extendNitro = false;
     }
