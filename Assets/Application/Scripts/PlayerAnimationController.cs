@@ -23,11 +23,8 @@ public class PlayerAnimationController : MonoBehaviour
     }
 
     public void BossHit() => animator.SetTrigger(_bossHit);
-
     public void Hit() => animator.SetTrigger(_hit);
-
     public void Run() => animator.SetTrigger(_run);
-
     public void Dance() => animator.SetTrigger(_dance);
     public void Idle() => animator.SetTrigger(_idle);
 }
