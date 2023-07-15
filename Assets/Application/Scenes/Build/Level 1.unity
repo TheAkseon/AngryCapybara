@@ -283,6 +283,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerNew
       objectReference: {fileID: 0}
+    - target: {fileID: 3101344072971392898, guid: 48497d57428228b47a65b6ddf5e997f7,
+        type: 3}
+      propertyPath: _warpSpeedEffect
+      value: 
+      objectReference: {fileID: 1591899476}
     - target: {fileID: 5734624795025209455, guid: 48497d57428228b47a65b6ddf5e997f7,
         type: 3}
       propertyPath: m_RootOrder
@@ -7982,6 +7987,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22532b7983a88164f8f47dc0cb63c642, type: 3}
+--- !u!198 &1591899476 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 831590306471626216, guid: 22532b7983a88164f8f47dc0cb63c642,
+    type: 3}
+  m_PrefabInstance: {fileID: 1591899475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1604802876
 PrefabInstance:
   m_ObjectHideFlags: 0
