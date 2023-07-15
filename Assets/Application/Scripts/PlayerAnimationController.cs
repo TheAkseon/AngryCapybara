@@ -10,6 +10,7 @@ public class PlayerAnimationController : MonoBehaviour
     private static readonly string _bossHit = "Boss Hit";
     private static readonly string _hit = "Hit";
     private static readonly string _dance = "Dance";
+    private static readonly string _idle = "Idle";
 
     private void Awake()
     {
@@ -28,5 +29,6 @@ public class PlayerAnimationController : MonoBehaviour
     public void Run() => animator.SetTrigger(_run);
 
     public void Dance() => animator.SetTrigger(_dance);
+    public void Idle() => animator.SetTrigger(_idle);
 }
 

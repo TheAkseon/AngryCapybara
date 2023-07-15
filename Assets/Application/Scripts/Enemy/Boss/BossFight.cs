@@ -79,6 +79,7 @@ public class BossFight : MonoBehaviour
         _playerMove.StopMovement();
         SwitchCamera();
         //PlayerAnimationController.Instance.Prepair();
+        PlayerAnimationController.Instance.BossHit();
         Invoke(nameof(SetFight), 1f);
     }
 

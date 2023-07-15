@@ -29,6 +29,7 @@ public class EnemyDie : MonoBehaviour
     private void OnEnemyDied(Enemy enemy)
     {
         PlayerModifier playerModifier = FindObjectOfType<PlayerModifier>();
+
         if (playerModifier)
         {
             if(enemy.NumberOfForce < _forceManager.NumberOfForce)
@@ -45,6 +46,7 @@ public class EnemyDie : MonoBehaviour
                 PlayerModifier.Instance.Die();
             }
         }
+
         enemy.Die -= OnEnemyDied;
         _enemies.Remove(enemy);
         Destroy(enemy.gameObject);

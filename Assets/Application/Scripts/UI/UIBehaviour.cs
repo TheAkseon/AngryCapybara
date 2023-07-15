@@ -151,6 +151,7 @@ public class UIBehaviour : MonoBehaviour
         PlayerModifier.Instance.Reberth();
         PlayerMove.Instance.ResumeMovement();
         PlayerMove.Instance.ApplyInvulnerable();
+        PlayerAnimationController.Instance.Run();
     }
 
     public void Continue()
@@ -165,6 +166,7 @@ public class UIBehaviour : MonoBehaviour
         PlayerModifier.Instance.Reberth();
         PlayerMove.Instance.ResumeMovement();
         PlayerMove.Instance.ApplyInvulnerable();
+        PlayerAnimationController.Instance.Run();
 #endif
     }
 
