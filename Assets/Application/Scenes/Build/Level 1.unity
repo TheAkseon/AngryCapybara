@@ -337,7 +337,7 @@ PrefabInstance:
     - target: {fileID: 7351242929443989255, guid: 9f01c8c24df83404b9208e33065bcbfb,
         type: 3}
       propertyPath: m_Name
-      value: EnemyAmogus
+      value: EnemyOctopus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f01c8c24df83404b9208e33065bcbfb, type: 3}
@@ -13745,7 +13745,7 @@ PrefabInstance:
     - target: {fileID: 7351242929443989255, guid: 675286662d9647545910f3530a8cc36f,
         type: 3}
       propertyPath: m_Name
-      value: EnemyNobb
+      value: EnemyHumster
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 675286662d9647545910f3530a8cc36f, type: 3}
