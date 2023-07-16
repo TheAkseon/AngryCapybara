@@ -41,6 +41,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7858423267118961386}
     m_Modifications:
+    - target: {fileID: 4235948250143333403, guid: 67b8e055a285879499b7d1a36b474caf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4235948250143333403, guid: 67b8e055a285879499b7d1a36b474caf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.38
+      objectReference: {fileID: 0}
     - target: {fileID: 4575584449234716820, guid: 67b8e055a285879499b7d1a36b474caf,
         type: 3}
       propertyPath: m_RootOrder
@@ -100,6 +110,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Obstacle2Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863916993821548126, guid: 67b8e055a285879499b7d1a36b474caf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8863916993821548126, guid: 67b8e055a285879499b7d1a36b474caf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67b8e055a285879499b7d1a36b474caf, type: 3}
