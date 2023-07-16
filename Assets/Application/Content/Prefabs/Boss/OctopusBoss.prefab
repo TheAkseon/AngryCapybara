@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 3332818436872194536}
   - component: {fileID: 2181247550708731532}
   m_Layer: 0
-  m_Name: HuggyWaggyBoss
+  m_Name: OctopusBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -744,7 +744,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fd5af45a9c45cef42a7543d146b72822,
         type: 3}
       propertyPath: m_Name
-      value: Cthulhu_Stage_1_BabyOctopus
+      value: OctopusBoss
       objectReference: {fileID: 0}
     - target: {fileID: 8837835292001029216, guid: fd5af45a9c45cef42a7543d146b72822,
         type: 3}
@@ -759,3 +759,29 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6320519983185375964}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6590902322695016333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fd5af45a9c45cef42a7543d146b72822,
+    type: 3}
+  m_PrefabInstance: {fileID: 6320519983185375964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2432650683715586176
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6590902322695016333}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4708012b71a81a243aa3987964965c68, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

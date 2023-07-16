@@ -1232,7 +1232,7 @@ GameObject:
   - component: {fileID: 7488715121125785946}
   - component: {fileID: 8647726216530654375}
   m_Layer: 0
-  m_Name: Meatball
+  m_Name: MeatballBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1265,7 +1265,7 @@ Animator:
   m_GameObject: {fileID: 7829105622472514528}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9a5519eedc0ccb44bc7ecb3a3ff044c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

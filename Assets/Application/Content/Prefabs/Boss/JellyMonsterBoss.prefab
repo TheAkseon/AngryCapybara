@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 3332818436872194536}
   - component: {fileID: 6534900325738623400}
   m_Layer: 0
-  m_Name: CameraManBoss
+  m_Name: JellyMonsterBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,7 +749,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
       propertyPath: m_Name
-      value: Monster
+      value: JellyMonsterBoss
       objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
@@ -774,7 +774,7 @@ Animator:
   m_GameObject: {fileID: 4771475889125837816}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ded1944f9e1da54458f37a141722e0a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
