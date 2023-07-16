@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 8138814613346156588}
   - component: {fileID: 2632935489576582409}
   m_Layer: 0
-  m_Name: EnemyKissyMissy
+  m_Name: JellyMonsterEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
@@ -157,7 +157,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
@@ -172,7 +172,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
       propertyPath: m_Name
-      value: Monster
+      value: JellyMonster
       objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 815b8703d9997494b8412efcfc33865f,
         type: 3}
@@ -191,6 +191,32 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: dbfc44a676173744998d2472cf767396, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 815b8703d9997494b8412efcfc33865f, type: 3}
+--- !u!1 &1332754733068729377 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 815b8703d9997494b8412efcfc33865f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2215644090471874928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6892466018887646661
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332754733068729377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 830e960f61f3aa742b7b155bdff3f085, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1816417341701383835 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 815b8703d9997494b8412efcfc33865f,

@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 4036675657186690037}
   - component: {fileID: 4807249498108020849}
   - component: {fileID: 3332818436872194536}
+  - component: {fileID: 6534900325738623400}
   m_Layer: 0
   m_Name: CameraManBoss
   m_TagString: Untagged
@@ -248,6 +249,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 11.388908, y: 7.9550796, z: 2}
   m_Center: {x: -0.06670189, y: 3.5322325, z: 3.9630356}
+--- !u!95 &6534900325738623400
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5585277940836723801}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6547222107157859361
 GameObject:
   m_ObjectHideFlags: 0
