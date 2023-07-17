@@ -39,11 +39,6 @@ public class YandexSDK : MonoBehaviour
         _levelLoader = FindObjectOfType<LevelLoader>();
         SaveData.Instance.Load();
 
-        if(SaveData.Instance.Data == null)
-        {
-            SaveData.Instance.NewData();
-        }
-
         if (SaveData.Instance.Data.CurrentLevel == 0 && SaveData.Instance.Data.FakeLevel == 0)
         {
             SaveData.Instance.Data.CurrentLevel = 1;
@@ -51,7 +46,6 @@ public class YandexSDK : MonoBehaviour
         }
 
         _levelLoader.LoadLevel(SaveData.Instance.Data.CurrentLevel);
-
         yield return null;
 #else
         yield return YandexGamesSdk.Initialize();
@@ -86,6 +80,8 @@ public class YandexSDK : MonoBehaviour
         Time.timeScale = value ? 0f : 1f;
         AudioListener.pause = value;
         AudioListener.volume = value ? 0f : 1f;
+        SoundsManager.Instance.Mute("music", value);
+        SoundsManager.Instance.Mute("effects", value);
     }
 
     private void StartGame()
@@ -94,6 +90,11 @@ public class YandexSDK : MonoBehaviour
         {
             _levelLoader = FindObjectOfType<LevelLoader>();
             SaveData.Instance.Load();
+
+            if (SaveData.Instance.Data == null)
+            {
+                SaveData.Instance.NewData();
+            }
 
             if (SaveData.Instance.Data.CurrentLevel == 0 && SaveData.Instance.Data.FakeLevel == 0)
             {
