@@ -39,6 +39,11 @@ public class YandexSDK : MonoBehaviour
         _levelLoader = FindObjectOfType<LevelLoader>();
         SaveData.Instance.Load();
 
+        if(SaveData.Instance.Data == null)
+        {
+            SaveData.Instance.NewData();
+        }
+
         if (SaveData.Instance.Data.CurrentLevel == 0 && SaveData.Instance.Data.FakeLevel == 0)
         {
             SaveData.Instance.Data.CurrentLevel = 1;
