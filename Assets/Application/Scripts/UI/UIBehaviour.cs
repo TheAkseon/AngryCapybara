@@ -16,7 +16,7 @@ public class UIBehaviour : MonoBehaviour
     [SerializeField] GameObject _joystickPanel;
 
     [Header("Player")]
-    [SerializeField] GameObject _forceCanvas;
+    [SerializeField] TextMeshProUGUI _forceText;
     [SerializeField] TextMeshProUGUI _levelText;
     [SerializeField] TextMeshProUGUI _coinText;
     [SerializeField] TextMeshProUGUI _widthCostText;
@@ -40,6 +40,8 @@ public class UIBehaviour : MonoBehaviour
     private readonly string WidthType = "width";
     private readonly string HeightType = "height";
 
+    public TextMeshProUGUI ForceText => _forceText;
+
     private void Awake()
     {
         if (Instance == null)
@@ -55,7 +57,7 @@ public class UIBehaviour : MonoBehaviour
         _levelText.text = SaveData.Instance.Data.FakeLevel.ToString();
         muteEffects = SaveData.Instance.Data.muteEffects;
         muteMusic = SaveData.Instance.Data.muteMusic;
-        _forceCanvas = PlayerMove.Instance.gameObject.transform.GetChild(3).gameObject;
+        //_forceCanvas = PlayerMove.Instance.gameObject.transform.GetChild(3).gameObject;
 
         if (SaveData.Instance.Data.muteMusic == true)
         {
@@ -90,7 +92,7 @@ public class UIBehaviour : MonoBehaviour
     {
         _startMenuPanel.SetActive(false);
         _inGamePanel.SetActive(true);
-        _forceCanvas.transform.localPosition = _inGameForceCanvasPosition;
+        //_forceCanvas.transform.localPosition = _inGameForceCanvasPosition;
         PlayerMove.Instance.ResumeMovement();
         FindObjectOfType<PlayerBehaviour>().Play();
     }
