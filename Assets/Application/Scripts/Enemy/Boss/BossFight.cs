@@ -35,7 +35,7 @@ public class BossFight : MonoBehaviour
         {
             // ѕозици€ X постепенно мен€етс€ от текущего значени€ до 0
             float x = Mathf.MoveTowards(_player.transform.position.x, 0, Time.deltaTime * 2f);
-            _player.transform.position = new Vector3(x, 0, _player.transform.position.z);
+            _player.transform.position = new Vector3(x, 0.2f, _player.transform.position.z);
 
             // ѕоворот по Y постепенно мен€етс€ от текущего значени€ до 0
             float rotation = Mathf.MoveTowardsAngle(_player.transform.eulerAngles.y, 0, Time.deltaTime * 100f);
