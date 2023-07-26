@@ -37,10 +37,9 @@ public class Boss : MonoBehaviour
 
     public void TakeDamage(int amountDifference)
     {
-        CameraShake();
-
         if (FindObjectOfType<BossFight>()._isFight)
         {
+            CameraShake();
             Health -= amountDifference;
 
             if (Health < MinHealth)

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3571563, g: 0.69737685, b: 0.7250215, a: 1}
+  m_IndirectSpecularColor: {r: 0.3570069, g: 0.69702756, b: 0.72354054, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -546,7 +546,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _numberOfForce: 4
-  _countForceText: {fileID: 1511610692}
 --- !u!4 &267751178
 Transform:
   m_ObjectHideFlags: 0
@@ -1634,7 +1633,7 @@ PrefabInstance:
     - target: {fileID: 4910575896729654772, guid: 4a84aed4d100c9e47ae4597e73932deb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.68631
+      value: 0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4910575896729654772, guid: 4a84aed4d100c9e47ae4597e73932deb,
         type: 3}
@@ -2100,18 +2099,6 @@ Transform:
   m_Father: {fileID: 1626883722}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1511610692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3747762360939894303, guid: 48497d57428228b47a65b6ddf5e997f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 159801311}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1519755952
 GameObject:
   m_ObjectHideFlags: 0
