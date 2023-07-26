@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 8138814613346156588}
   - component: {fileID: 2632935489576582409}
   m_Layer: 0
-  m_Name: EnemyHuggyWaggy
+  m_Name: EnemyKotlet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
