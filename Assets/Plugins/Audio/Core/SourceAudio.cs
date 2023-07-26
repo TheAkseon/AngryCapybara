@@ -6,14 +6,15 @@ namespace Plugins.Audio.Core
     [RequireComponent(typeof(AudioSource))]
     public class SourceAudio : MonoBehaviour
     {
+        [SerializeField] private AudioSource _effectsAudioSource;
         [HideInInspector] public bool Loop;
-    
+
         public float Volume
         {
             get => _audioSource.volume;
             set => _audioSource.volume = value;
         }
-        
+
         public bool Mute
         {
             get => _audioSource.mute;
@@ -25,7 +26,7 @@ namespace Plugins.Audio.Core
             get => _audioSource.pitch;
             set => _audioSource.pitch = value;
         }
-        
+
         private AudioSource _audioSource
         {
             get
@@ -34,18 +35,18 @@ namespace Plugins.Audio.Core
                 {
                     _audioSourceCech = GetComponent<AudioSource>();
                     _audioSource.clip = null;
-    
+
                     Loop = _audioSource.loop;
                     _audioSource.loop = false;
                 }
-                
+
                 return _audioSourceCech;
             }
         }
-        
+
         private AudioSource _audioSourceCech;
         private Coroutine _playRoutine;
-        
+
         private string _key;
         private bool _loadClip;
 
@@ -71,7 +72,7 @@ namespace Plugins.Audio.Core
         public void Play(string key)
         {
             _audioSource.Stop();
-            
+
             if (string.IsNullOrEmpty(key))
             {
                 Debug.LogError("key is empty, Source Audio PlaySound: " + gameObject.name);
@@ -82,8 +83,19 @@ namespace Plugins.Audio.Core
             {
                 StopCoroutine(_playRoutine);
             }
-            
+
             _playRoutine = StartCoroutine(PlayRoutine(key));
+        }
+
+        public void PlayOneShot(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                Debug.LogError("key is empty, Source Audio PlaySound: " + gameObject.name);
+                return;
+            }
+
+            _effectsAudioSource.PlayOneShot(AudioManagement.Instance.GetClip(key));
         }
 
         private IEnumerator PlayRoutine(string key)
@@ -91,10 +103,10 @@ namespace Plugins.Audio.Core
             _loadClip = true;
             _key = key;
             _clip = null;
-            
+
             _audioSource.Stop();
             _isPlaying = false;
-            
+
             yield return AudioManagement.Instance.GetClip(key, audioClip => _clip = audioClip);
 
             if (_clip == null)
@@ -109,7 +121,7 @@ namespace Plugins.Audio.Core
             _lastTime = 0;
 
             _loadClip = false;
-            
+
             Debug.Log("Start play audio: " + key);
         }
 
@@ -121,7 +133,7 @@ namespace Plugins.Audio.Core
                 {
                     _audioSource.Stop();
                 }
-                
+
                 _audioSource.time = 0;
                 _audioSource.Play();
                 _isPlaying = true;
@@ -145,14 +157,14 @@ namespace Plugins.Audio.Core
         {
             HandleLoop();
         }
-        
+
         private void HandleLoop()
         {
             if (Loop == false || _clip == null || _loadClip)
             {
                 return;
             }
-            
+
             if (_audioSource.time <= 0 && _isPlaying)
             {
                 Debug.Log("Audio Loop: " + _key);
@@ -169,7 +181,7 @@ namespace Plugins.Audio.Core
                 _audioSource.time = _lastTime;
                 Debug.Log(_key + " Last Time: " + _lastTime);
             }
-            
+
             _isFocus = true;
         }
 
@@ -180,7 +192,7 @@ namespace Plugins.Audio.Core
                 _lastTime = _audioSource.time;
                 Debug.Log(_key + "Set Last Time: " + _lastTime);
             }
-            
+
             _isFocus = false;
         }
     }

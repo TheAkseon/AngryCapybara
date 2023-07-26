@@ -2,23 +2,20 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Plugins.Audio.Core;
 
 public class SoundsManager : MonoBehaviour
 {
     public static SoundsManager Instance = null;
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource musicAudioSource;
+    [SerializeField] private SourceAudio _soundsDatabase;
     [SerializeField] private AudioSource effectsAudioSource;
-
-    [Header("Clips")]
-    [SerializeField] private Music[] backgroundMusic;
-    [SerializeField] private Sound[] effects;
 
     private float _startVolume;
 
     private float _fadeDuration = 0.5f;
-    
+
     //private int currentClip = 0;
 
     private void Awake()
@@ -29,38 +26,23 @@ public class SoundsManager : MonoBehaviour
             //DontDestroyOnLoad(gameObject);
         }
         //else
-            //Destroy(gameObject);
-    }
-
-    private void Update()
-    {
-        if (!musicAudioSource.isPlaying && SceneManager.GetActiveScene().buildIndex != 0)
-        {
-            PlayBackgroundMusic();
-        }
+        //Destroy(gameObject);
     }
 
     private void Start()
     {
         int levelNumber = SceneManager.GetActiveScene().buildIndex;
 
-        if(levelNumber <= backgroundMusic.Length)
+        if (levelNumber <= 6)
         {
-            Music m = Array.Find(backgroundMusic, music => music.levelNumber == levelNumber);
-
-            //m ??= Array.Find(backgroundMusic, music => music.levelNumber == UnityEngine.Random.Range(0, backgroundMusic.Length) + 1);
-
-            musicAudioSource.clip = m.audio;
+            _soundsDatabase.Play(levelNumber.ToString());
         }
         else
         {
-            Music r = backgroundMusic[UnityEngine.Random.Range(0, backgroundMusic.Length)];
-
-            musicAudioSource.clip = r.audio;
+            _soundsDatabase.Play(UnityEngine.Random.Range(1, 7).ToString());
         }
 
-        musicAudioSource.Play();
-        _startVolume = musicAudioSource.volume;
+        _soundsDatabase.Loop = true;
     }
 
     public void PlayBackgroundMusic()
@@ -69,26 +51,23 @@ public class SoundsManager : MonoBehaviour
         /*if (currentClip == backgroundMusic.Length)
             currentClip = 0;*/
         //musicAudioSource.clip = backgroundMusic[currentClip++].audio;
-        musicAudioSource.Play();
+    }
+
+    public void PlayeMusic(string key)
+    {
+        _soundsDatabase.Loop = false;
+        _soundsDatabase.Play(key);
     }
 
     public void PlaySound(string name)
     {
-        Sound s = Array.Find(effects, sound => sound.name == name);
-
-        if (s == null)
-        {
-            Debug.LogError(name + " not found.");
-            return;
-        }
-        effectsAudioSource.volume = s.Volume;
-        effectsAudioSource.PlayOneShot(s.audioClip);
+        _soundsDatabase.PlayOneShot(name);
     }
 
     public void Mute(string source, bool value)
     {
         if (source.Equals("music"))
-            musicAudioSource.mute = value;
+            _soundsDatabase.Mute = value;
         else
             effectsAudioSource.mute = value;
     }
@@ -102,14 +81,14 @@ public class SoundsManager : MonoBehaviour
     {
         float elapsedTime = 0f;
 
-        while(elapsedTime < _fadeDuration)
+        while (elapsedTime < _fadeDuration)
         {
             elapsedTime += Time.deltaTime;
-            musicAudioSource.volume = Mathf.Lerp(_startVolume, 0.0f, elapsedTime / _fadeDuration);
+            _soundsDatabase.Volume = Mathf.Lerp(_startVolume, 0.0f, elapsedTime / _fadeDuration);
             yield return null;
         }
 
-        musicAudioSource.Stop();
+        _soundsDatabase.Stop();
     }
 }
 

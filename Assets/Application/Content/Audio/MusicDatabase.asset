@@ -49,63 +49,57 @@ MonoBehaviour:
     Name: level6.mp3
     Preload: 0
     _id: 5abfb5bf-75af-4fd8-9e60-b8a8f0d2150b
-  - Clip: {fileID: 0}
-    Key: OctopusDied
-    FolderPath: 
-    Name: 
-    Preload: 0
-    _id: 78106b15-e00d-44d5-8c85-8c37c9864c98
-  - Clip: {fileID: 0}
+  - Clip: {fileID: 8300000, guid: 7c7559c07d4dc724d88e527ee5d0bf1c, type: 3}
     Key: JellyDied
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Music\EnemyDied\
+    Name: JellyDied.mp3
     Preload: 0
-    _id: eb9a0348-7d56-4d09-81b3-1bbee6217213
-  - Clip: {fileID: 0}
-    Key: PotatoDied
-    FolderPath: 
-    Name: 
+    _id: 0872535e-38ee-4202-9e27-59aa9519aa02
+  - Clip: {fileID: 8300000, guid: 05da46041de7f5a4b97e7ffb77da96a3, type: 3}
+    Key: FriesDied
+    FolderPath: Application\Content\Audio\Music\EnemyDied\
+    Name: FriesDied.mp3
     Preload: 0
-    _id: cf8df248-81ad-46e4-b4ea-e7cf111c83e2
-  - Clip: {fileID: 0}
+    _id: 41b53b9b-dc2f-48ce-a1eb-ef185d37d0ec
+  - Clip: {fileID: 8300000, guid: 159580f34f39bb641b358d65c46d916f, type: 3}
     Key: CoinUp
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: CoinBackUp.mp3
     Preload: 0
-    _id: 69ab1990-4083-4869-ad04-1bb4628da465
-  - Clip: {fileID: 0}
+    _id: c767e7ef-633e-4eb1-91fa-a666c80656d5
+  - Clip: {fileID: 8300000, guid: cc437aa4b000ee04f9a725f3c7631266, type: 3}
     Key: Burger
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: inecraft_pick_u(2) (mp3cut.net).mp3
     Preload: 0
-    _id: 98e9a59d-255f-4cb6-9553-539ef6b175d6
-  - Clip: {fileID: 0}
+    _id: 09e75674-539f-4eb6-ac4c-6207d62028c2
+  - Clip: {fileID: 8300000, guid: f28e5862159846e43a867afe564fe2f9, type: 3}
     Key: BossHit
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: "\u0423\u0434\u0430\u0440 \u0431\u043E\u0441\u0441\u0430.mp3"
     Preload: 0
-    _id: 98a54798-977f-4142-abad-4e617cf161ba
-  - Clip: {fileID: 0}
+    _id: 931934cb-1f46-4711-a4e9-42140b4699c8
+  - Clip: {fileID: 8300000, guid: f28e5862159846e43a867afe564fe2f9, type: 3}
     Key: EnemyHit
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: "\u0423\u0434\u0430\u0440 \u0431\u043E\u0441\u0441\u0430.mp3"
     Preload: 0
-    _id: 1555e145-8ac4-4848-8d91-c2ab95cfc5bc
-  - Clip: {fileID: 0}
+    _id: ceba09f5-e08f-45ea-9b57-37e6f1fbc9fe
+  - Clip: {fileID: 8300000, guid: 8e3632b8b131133409cb34b49a6a6d20, type: 3}
     Key: Teleport
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: enderman_teleport.mp3
     Preload: 0
-    _id: 05a9bbb3-ed97-4909-9040-7b766b66ab0a
-  - Clip: {fileID: 0}
+    _id: 26fc17a7-0a0b-49cc-be9d-c69e42f6e7f6
+  - Clip: {fileID: 8300000, guid: 080c1dc10b3e17c4da6d92793e1e476d, type: 3}
     Key: Nitro
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: nitro.mp3
     Preload: 0
-    _id: c53ccca9-e86e-4e36-bf22-0c67694e716f
-  - Clip: {fileID: 0}
+    _id: e1eae5e8-6c63-4e56-9f39-ded625d0f87f
+  - Clip: {fileID: 8300000, guid: b906894a774d90d4ab815693b7c662bc, type: 3}
     Key: Increase
-    FolderPath: 
-    Name: 
+    FolderPath: Application\Content\Audio\Effects\
+    Name: fast_airy_zoom_002_33377.mp3
     Preload: 0
-    _id: 59e05360-73ef-49c1-a983-426c4550ae38
+    _id: d766fe6a-3a13-4813-8626-caf6ff4d3526

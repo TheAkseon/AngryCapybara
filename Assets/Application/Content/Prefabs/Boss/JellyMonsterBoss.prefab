@@ -231,7 +231,7 @@ MonoBehaviour:
   _particleHitPosition: {fileID: 1743849160922173346}
   _effectDiePrefab: {fileID: 7388629540683307657}
   _bossFightCamera: {fileID: 8387665419754050121}
-  _nameBossDiedSound: CameramanDied
+  _nameBossDiedSound: JellyDied
   _player: {fileID: 0}
   _playerMove: {fileID: 0}
   _playerCamera: {fileID: 0}

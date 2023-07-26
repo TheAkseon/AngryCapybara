@@ -39,7 +39,7 @@ public class YandexSDK : MonoBehaviour
         _levelLoader = FindObjectOfType<LevelLoader>();
         SaveData.Instance.Load();
 
-        if(SaveData.Instance.Data == null)
+        if (SaveData.Instance.Data == null)
         {
             SaveData.Instance.NewData();
         }
@@ -114,24 +114,31 @@ public class YandexSDK : MonoBehaviour
 
     private IEnumerator GetData()
     {
-        string loadedString = "None";
-
-        PlayerAccount.GetCloudSaveData((data) =>
+        if (YandexGamesSdk.IsInitialized)
         {
-            loadedString = data;
-        });
+            string loadedString = "None";
 
-        while (loadedString == "None")
-        {
-            yield return null;
+            PlayerAccount.GetCloudSaveData((data) =>
+            {
+                loadedString = data;
+            });
+
+            while (loadedString == "None")
+            {
+                yield return null;
+            }
+
+            if (loadedString == "{}")
+            {
+                yield break;
+            }
+
+            SaveData.Instance._data = JsonUtility.FromJson<DataHolder>(loadedString);
+            SaveManager.Save(_saveKey, SaveData.Instance._data);
         }
-
-        if (loadedString == "{}")
+        else
         {
-            yield break;
+            yield return YandexGamesSdk.Initialize();
         }
-
-        SaveData.Instance._data = JsonUtility.FromJson<DataHolder>(loadedString);
-        SaveManager.Save(_saveKey, SaveData.Instance._data);
     }
 }

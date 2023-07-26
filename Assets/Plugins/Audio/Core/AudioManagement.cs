@@ -13,14 +13,14 @@ namespace Plugins.Audio.Core
         private Dictionary<string, AudioClip> _cechAudio = new Dictionary<string, AudioClip>();
         private AudioConfiguration _configuration;
         private AudioDatabase _database;
-        
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Init()
         {
             GameObject instance = new GameObject("Audio Management");
             Instance = instance.AddComponent<AudioManagement>();
 
-            DontDestroyOnLoad(instance); 
+            DontDestroyOnLoad(instance);
         }
 
         private void Awake()
@@ -28,8 +28,16 @@ namespace Plugins.Audio.Core
             _configuration = AudioConfiguration.GetInstance();
             _database = _configuration.GetDatabase();
             _database.Initialize();
-            
+
             PreloadAudio();
+        }
+
+        public AudioClip GetClip(string key)
+        {
+            AudioClip audioClip;
+            AudioData audioData = _database.GetData(key);
+            audioClip = audioData.Clip;
+            return audioClip;
         }
 
         public IEnumerator GetClip(string key, Action<AudioClip> result)
@@ -38,10 +46,10 @@ namespace Plugins.Audio.Core
             {
                 result.Invoke(clip);
             }
-            else 
+            else
             {
                 AudioData audioData = _database.GetData(key);
-                
+
 #if UNITY_EDITOR || !UNITY_WEBGL
                 result.Invoke(audioData.Clip);
                 yield break;
@@ -65,10 +73,10 @@ namespace Plugins.Audio.Core
                 {
                     continue;
                 }
-                
+
                 _cechAudio[audioData.Key] = audioData.Clip;
             }
-            
+
             return;
 #endif
 
@@ -78,7 +86,7 @@ namespace Plugins.Audio.Core
                 {
                     continue;
                 }
-                
+
                 string path = Application.streamingAssetsPath + "/Audio/" + audioData.FolderPath + audioData.Name;
                 StartCoroutine(LoadClip(path, audioData.Key));
             }
@@ -98,7 +106,7 @@ namespace Plugins.Audio.Core
                     _cechAudio[key] = audioClip;
 
                     result?.Invoke(audioClip);
-                    
+
                     Debug.Log("Audio clip loaded: " + key + " time: " + (Time.time - startTime));
                 }
             }

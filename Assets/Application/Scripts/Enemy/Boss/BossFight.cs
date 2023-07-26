@@ -35,21 +35,11 @@ public class BossFight : MonoBehaviour
         {
             // ѕозици€ X постепенно мен€етс€ от текущего значени€ до 0
             float x = Mathf.MoveTowards(_player.transform.position.x, 0, Time.deltaTime * 2f);
-            _player.transform.position = new Vector3(x, 0.2f, _player.transform.position.z);
+            _player.transform.position = new Vector3(x, 0, _player.transform.position.z);
 
             // ѕоворот по Y постепенно мен€етс€ от текущего значени€ до 0
             float rotation = Mathf.MoveTowardsAngle(_player.transform.eulerAngles.y, 0, Time.deltaTime * 100f);
             _player.transform.localEulerAngles = new Vector3(0, rotation, 0);
-        }
-
-        if (_isFight)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                PlayerAnimationController.Instance.BossHit();
-                SoundsManager.Instance.PlaySound("BossHit");
-                Instantiate(_effectHitPrefab, _particleHitPosition.position, transform.rotation);
-            }
         }
     }
 
@@ -71,6 +61,12 @@ public class BossFight : MonoBehaviour
         _boss.Die -= OnBossDied;
     }
 
+    public void Hit()
+    {
+        SoundsManager.Instance.PlaySound("BossHit");
+        Instantiate(_effectHitPrefab, _particleHitPosition.position, transform.rotation);
+    }
+
     // —ражение началось
     private void OnBossFighted(Boss boss)
     {
@@ -78,15 +74,13 @@ public class BossFight : MonoBehaviour
         _isPreFinish = true;
         _playerMove.StopMovement();
         SwitchCamera();
-        //PlayerAnimationController.Instance.Prepair();
         PlayerAnimationController.Instance.Idle();
         Invoke(nameof(SetFight), 1f);
     }
 
     private void OnBossDied()
     {
-        SoundsManager.Instance.FadeOut();
-        SoundsManager.Instance.PlaySound(_nameBossDiedSound);
+        SoundsManager.Instance.PlayeMusic(_nameBossDiedSound);
         _effectDiePrefab.Play();
         _animator.SetTrigger("Die");
         _isFight = false;

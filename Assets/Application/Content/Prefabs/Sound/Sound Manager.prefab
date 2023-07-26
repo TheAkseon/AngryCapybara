@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6726193351619668041}
   - component: {fileID: 7869830845475265203}
   - component: {fileID: 3147668368595296508}
+  - component: {fileID: 3102821212467104415}
   m_Layer: 0
   m_Name: Sound Manager
   m_TagString: Untagged
@@ -46,61 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ca17eaeb127c94499f8ce35a53d7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicAudioSource: {fileID: 7869830845475265203}
-  effectsAudioSource: {fileID: 3147668368595296508}
-  backgroundMusic:
-  - levelNumber: 1
-    audio: {fileID: 8300000, guid: 1adeda5e6bdafde48837a738ec53ab82, type: 3}
-  - levelNumber: 2
-    audio: {fileID: 8300000, guid: 63d0393501b850d46a4bf2dc8b8831a1, type: 3}
-  - levelNumber: 3
-    audio: {fileID: 8300000, guid: 36a485ca9da3c3846a4e7320560f64ef, type: 3}
-  - levelNumber: 4
-    audio: {fileID: 8300000, guid: 920495fb54fc1ff459040f962dbdfe97, type: 3}
-  - levelNumber: 5
-    audio: {fileID: 8300000, guid: 3208a5ce7e4ad4c4696cd00b44cc06bb, type: 3}
-  - levelNumber: 6
-    audio: {fileID: 8300000, guid: 5a2b6b8d4828f5c4eada3befb80de544, type: 3}
-  effects:
-  - name: CoinUp
-    audioClip: {fileID: 8300000, guid: 4671e2288ab46ce40aa58a77bf025c8b, type: 3}
-    Volume: 0.7
-  - name: Mushroom
-    audioClip: {fileID: 8300000, guid: cc437aa4b000ee04f9a725f3c7631266, type: 3}
-    Volume: 1
-  - name: BossHit
-    audioClip: {fileID: 8300000, guid: f28e5862159846e43a867afe564fe2f9, type: 3}
-    Volume: 0.7
-  - name: EnemyHit
-    audioClip: {fileID: 8300000, guid: f28e5862159846e43a867afe564fe2f9, type: 3}
-    Volume: 0.7
-  - name: Teleport
-    audioClip: {fileID: 8300000, guid: b9546b5271aa6e14c98db3bc23517722, type: 3}
-    Volume: 0.7
-  - name: Nitro
-    audioClip: {fileID: 8300000, guid: 080c1dc10b3e17c4da6d92793e1e476d, type: 3}
-    Volume: 0.7
-  - name: HaggyWaggyDied
-    audioClip: {fileID: 8300000, guid: 320652d9693139c4482ca5f717feee52, type: 3}
-    Volume: 0.7
-  - name: AmogusDied
-    audioClip: {fileID: 8300000, guid: 05da46041de7f5a4b97e7ffb77da96a3, type: 3}
-    Volume: 0.7
-  - name: BlueDied
-    audioClip: {fileID: 8300000, guid: 7c7559c07d4dc724d88e527ee5d0bf1c, type: 3}
-    Volume: 0.7
-  - name: CameramanDied
-    audioClip: {fileID: 8300000, guid: 5bad1788de72bca409c8896b9bf0315e, type: 3}
-    Volume: 0.7
-  - name: KissyDied
-    audioClip: {fileID: 8300000, guid: 0558a9f075c7c3e48948ae1978fd383c, type: 3}
-    Volume: 0.7
-  - name: Increase
-    audioClip: {fileID: 8300000, guid: b906894a774d90d4ab815693b7c662bc, type: 3}
-    Volume: 0.7
-  - name: OrangeDied
-    audioClip: {fileID: 8300000, guid: 65f27e916c8360c489938cf29af349ff, type: 3}
-    Volume: 0.7
+  _soundsDatabase: {fileID: 3102821212467104415}
+  effectsAudioSource: {fileID: 7869830845475265203}
 --- !u!82 &7869830845475265203
 AudioSource:
   m_ObjectHideFlags: 0
@@ -295,3 +243,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3102821212467104415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168573255344492246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c896f32ca6a24109b8311345ab6aae6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectsAudioSource: {fileID: 3147668368595296508}
+  Loop: 0
