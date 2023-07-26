@@ -6,7 +6,8 @@ public class ForceManager : MonoBehaviour
     public static ForceManager Instance;
 
     [SerializeField] private int _numberOfForce;
-    [SerializeField] private TextMeshProUGUI _countForceText;
+
+    private TextMeshProUGUI _countForceText;
     public int NumberOfForce => _numberOfForce;
 
     private void Awake()
@@ -17,6 +18,7 @@ public class ForceManager : MonoBehaviour
 
     private void Start()
     {
+        _countForceText = UIBehaviour.Instance.ForceText;
         _countForceText.text = _numberOfForce.ToString();
     }
 
