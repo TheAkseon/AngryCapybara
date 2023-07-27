@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soundsDatabase: {fileID: 3102821212467104415}
-  effectsAudioSource: {fileID: 7869830845475265203}
+  effectsAudioSource: {fileID: 3147668368595296508}
 --- !u!82 &7869830845475265203
 AudioSource:
   m_ObjectHideFlags: 0

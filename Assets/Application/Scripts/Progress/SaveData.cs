@@ -80,8 +80,7 @@ public class SaveData : MonoBehaviour
 #if UNITY_WEBGL && !UNITY_EDITOR
         string jsonDataString = JsonUtility.ToJson(_data, true);
 
-        if (PlayerAccount.IsAuthorized)
-            PlayerAccount.SetCloudSaveData(jsonDataString);
+        PlayerAccount.SetCloudSaveData(jsonDataString);
 #endif
     }
 
